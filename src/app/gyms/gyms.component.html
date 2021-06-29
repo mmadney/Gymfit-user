@@ -1,0 +1,22 @@
+<div class="container" style="width: 50%;" *ngFor="let gym of gyms">
+  <br>
+  <div class="card" >
+    <div class="card-body">
+      <h3 class="card-title">{{gym.Name}}</h3>
+      
+
+      <div class="row">
+        <div class="col">
+          <p class="card-text">
+            {{gym.Address}}
+          </p>
+          <h3>{{gym.Mobile}}</h3>
+        </div>
+        <div class="col">
+          {{gym.Price}} EGP/Month
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
