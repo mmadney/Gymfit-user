@@ -26,9 +26,10 @@ import { AlertifyService } from './_services/alertify.service';
 import { CartComponent } from './cart/cart.component';
 import { GymsComponent } from './gyms/gyms.component';
 import { ProgramsComponent } from './programs/programs.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
-  declarations: [									
+  declarations: [										
     AppComponent,
       NavComponent,
       RegisterComponent,
@@ -38,7 +39,8 @@ import { ProgramsComponent } from './programs/programs.component';
       LoginComponent,
       CartComponent,
       GymsComponent,
-      ProgramsComponent
+      ProgramsComponent,
+      ShoppingCartComponent
    ],
   imports: [
     BrowserModule,

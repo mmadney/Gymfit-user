@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Gym } from 'app/_Models/Gym';
 import { GymService } from 'app/_services/gym.service';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'app-gyms',
@@ -17,4 +18,7 @@ export class GymsComponent implements OnInit {
     });
   }
 
+  getImage(img:string) {
+    return environment.imageURL+ img;
+  }
 }

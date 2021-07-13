@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
 import { GymService } from './_services/gym.service';
 import { GymsComponent } from './gyms/gyms.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 export const routes: Routes =[
   {
@@ -29,11 +30,18 @@ export const routes: Routes =[
   },
   {
     path: 'Programs',
-    component: ProgramsComponent
+    component: ProgramsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Gyms',
-    component: GymsComponent
+    component: GymsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'Cart',
+    component: ShoppingCartComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

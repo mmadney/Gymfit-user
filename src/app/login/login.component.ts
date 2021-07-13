@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit {
             // expdate.setMilliseconds(expdate.getMilliseconds()+res['TokenInfo']['original']['expires_in']);
             localStorage.setItem('token', res['Token']);
             localStorage.setItem('expiration', res['ExpiresIn']);
+            localStorage.setItem('userId', res['User']['ID']);
+            localStorage.setItem('name', res['User']['FullName']);
             this.router.navigate(['/Products']);
           }
-          this.userService.user = res["User"]["original"];
-          sessionStorage.setItem('user', JSON.stringify(res["User"]["original"]));
         }
       },
       err => {

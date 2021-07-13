@@ -9,4 +9,5 @@ export class Gym {
     CreatedAt?: Date;
     UpdatedAt?: Date;
     Deleted?: boolean;
+    GymImage?:string;
 }
